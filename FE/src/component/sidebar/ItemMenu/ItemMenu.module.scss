@@ -1,0 +1,21 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    gap: 1em;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background 200ms ease-in-out 0s;
+    -webkit-box-pack: start;
+    -webkit-box-align: center;
+    cursor: pointer;
+    &:hover{
+        background: rgba(22, 24, 35, 0.03);
+    }
+    .icon{
+        width: 32px;
+    }
+    .text{
+        font-weight: bolder;
+    }
+}

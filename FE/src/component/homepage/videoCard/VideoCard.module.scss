@@ -1,0 +1,132 @@
+.wrapper {
+  // max-width: 325px;
+  position: relative;
+  video {
+    height: calc(316.667px + 17.3611vw);
+    border-radius: 10px;
+    max-width: 400px;
+    object-fit: contain;
+  }
+  &:hover .options-btn {
+    opacity: 1;
+  }
+  &:hover .actions-btn {
+    opacity: 1;
+  }
+  .options-btn {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    right: 16px;
+    position: absolute;
+    top: 16px;
+    transition: opacity 0.3s ease 0s;
+    opacity: 0;
+  }
+  //
+  .actions-btn {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease 0s;
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px;
+      .audio-scroll-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .btn {
+        color: rgb(255, 255, 255);
+        padding: 7px;
+        cursor: pointer;
+      }
+    }
+    //
+    .process-time {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px 12px 12px;
+      .process {
+        flex: 1;
+        display: flex;
+        align-items: center;
+      }
+
+      p {
+        flex: 1 1 64px;
+        max-width: 64px;
+        margin-inline-start: 8px;
+        font-size: 10px;
+        line-height: 16px;
+        color: rgb(255, 255, 255);
+        text-align: end;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  // BTN-POSITIONS
+  .btn-position {
+    position: relative;
+    &:hover .volumn {
+      opacity: 1;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 20px;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .volumn {
+      position: absolute;
+      transform: translateX(-50%) rotate(-90deg);
+      left: 50%;
+      top: -35px;
+      width: 48px;
+      height: 6px;
+      overflow: hidden;
+      appearance: none;
+      outline: none;
+      border-radius: 16px;
+      background-color: rgba(255, 255, 255, 0.34);
+      opacity: 0;
+      &::-webkit-slider-thumb {
+        cursor: pointer;
+        /* removing default appearance */
+        -webkit-appearance: none;
+        appearance: none;
+        /* creating a custom design */
+        height: 8px;
+        width: 8px;
+        background-color: #f91010;
+        border-radius: 50%;
+        transform: translateY(-0.83px);
+        border: 2px solid rgb(255, 0, 0);
+        /*  slider progress trick  */
+        box-shadow: -407px 0 0 400px rgb(255, 0, 0);
+      }
+      &::-webkit-slider-runnable-track {
+        height: 6px;
+        // background: #ccc;
+        border-radius: 16px;
+      }
+      &::-moz-range-track {
+        height: 6px;
+        // background: #ccc;
+        border-radius: 16px;
+      }
+    }
+  }
+}

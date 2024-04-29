@@ -1,0 +1,66 @@
+.wrapper {
+  padding: 20px;
+  background: rgba(22, 24, 35, 0.058);
+  border-radius: 12px;
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    .text-info {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      flex: 1 1 auto;
+      margin-right: 12px;
+      margin-left: 10px;
+      p:first-child {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        transition: border 0.3s linear;
+        span {
+          &:hover {
+            border-bottom: 2px solid #000;
+          }
+        }
+      }
+      p:last-child {
+        font-size: 14px;
+        line-height: 18px;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+      }
+    }
+  }
+  .description {
+    padding: 15px 0;
+    span:first-child {
+      fill: rgb(22, 24, 35);
+      font-weight: 400;
+    }
+    .tags {
+      font-weight: 600;
+      color: rgb(43, 93, 185);
+      transition: border 0.3s linear;
+      &:hover {
+        border-bottom: 2px solid #000;
+      }
+    }
+    .tags + .tags {
+      margin-left: 5px;
+    }
+  }
+  .music {
+    p {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+    }
+  }
+}

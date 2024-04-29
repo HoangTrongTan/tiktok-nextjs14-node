@@ -1,0 +1,144 @@
+@import "../customestyle.scss";
+$img-card-user-w: 116px;
+$img-card-user-h: 116px;
+$img-card-user-radius: 50%;
+
+.wrapper {
+  margin: var(--margin-top-way-header) 0 0 var(--width-sidebar);
+  padding: 20px;
+  .card-info {
+    @include flx-ali(1em, $ali: start);
+    margin-bottom: 20px;
+    .btn-share-ellipse {
+      @include flx-ali(1em);
+      div {
+        cursor: pointer;
+      }
+    }
+    .btn-not-own {
+      @include flx-ali(0.5em);
+      .btn-un-follow {
+        padding: 6px 10px;
+        border: 1px solid rgba(22, 24, 35, 0.12);
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.5s linear;
+        &:hover {
+          background-color: rgba(22, 24, 35, 0.03);
+        }
+      }
+    }
+    .card-center {
+      flex: 1;
+      max-width: 40%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7em;
+      .btn-card {
+        margin: 16px 0px 0px;
+        flex: 0 0;
+      }
+      .user-name {
+        @include ft-sz-clr-wei-mar-pad-alig(
+          $sz: 32px,
+          $wei: 700,
+          $alig: start,
+          $mar: 0 0 4px
+        );
+      }
+      .nickname {
+        @include ft-sz-clr-wei-mar-pad-alig($sz: 18px, $wei: 600, $alig: start);
+      }
+    }
+    img {
+      @include w_h($img-card-user-w, $img-card-user-h, $img-card-user-radius);
+    }
+  }
+  .actions-wrap {
+    @include flx-ali($gap: 1.5em);
+    .item-actions {
+      @include flx-ali($gap: 0.5em);
+      span:first-child {
+        font-weight: 700;
+      }
+      span:last-child {
+        @include ft-sz-clr-wei-mar-pad-alig(
+          $sz: 16px,
+          $wei: 400,
+          $cl: rgba(22, 24, 35, 0.75)
+        );
+      }
+    }
+  }
+  .tabs {
+    .list-video {
+      display: flex;
+      justify-content: flex-start;
+      gap: 0.5em;
+      flex-wrap: wrap;
+      overflow-y: scroll;
+      min-height: 350px;
+
+      .item {
+        position: relative;
+        flex: 0 0 184px;
+        height: 244px;
+        .content-txt {
+          padding-left: 15px;
+        }
+        .content:hover .options {
+          opacity: 1;
+        }
+        .options {
+          cursor: pointer;
+          position: absolute;
+          bottom: -30px;
+          right: 0;
+          transform: scale(0.7) rotate(-90deg);
+          color: rgba(93, 93, 96, 0.75);
+          opacity: 0;
+        }
+        video {
+          border-radius: 10px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .play-btn {
+          position: absolute;
+          left: 10px;
+          bottom: 10px;
+          color: #fff;
+          font-weight: bolder;
+          @include center;
+        }
+      }
+    }
+    .private {
+      padding: 100px 0;
+      @include center_column;
+      .private-icons {
+        fill-opacity: 0.34;
+      }
+      .private-bold {
+        @include ft-sz-clr-wei-mar-pad-alig(
+          $sz: 24px,
+          $wei: 700,
+          $cl: rgb(22, 24, 35),
+          $mar: 24px
+        );
+      }
+      .private-normal {
+        @include ft-sz-clr-wei-mar-pad-alig(
+          $sz: 16px,
+          $wei: 400,
+          $cl: rgba(22, 24, 35, 0.75),
+          $mar: 2px
+        );
+      }
+    }
+  }
+}
+.flex-tabs {
+  @include flx-ali(0.5em);
+}

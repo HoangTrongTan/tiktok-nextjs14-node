@@ -1,0 +1,14 @@
+.ant-tabs-nav {
+  width: 100% !important;
+}
+.ant-tabs-tab {
+  display: flex; /* centers text inside tabs */
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.ant-tabs-nav > div:nth-of-type(1) {
+  display: unset !important;
+  width: 100% !important;
+}

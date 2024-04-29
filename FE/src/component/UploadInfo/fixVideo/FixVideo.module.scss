@@ -1,0 +1,18 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    background-color: rgba(22, 24, 35, 0.06);
+    border: 0.5px solid rgba(22,24,35,0.12);
+    padding: 10px 20px;
+    border-radius: 8px;
+    .video-time{
+        display: flex;
+        align-items: center;
+        video{
+            width: 35px;
+            height: 52px;
+            object-fit: contain;
+        }
+    }
+}

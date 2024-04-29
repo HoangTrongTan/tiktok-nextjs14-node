@@ -1,0 +1,243 @@
+@import "../../customestyle.scss";
+
+.wrapper {
+  background: rgb(255, 255, 255);
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  .video-watching {
+    flex: 1 0 600px;
+    max-width: 100%;
+    background: rgb(0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    padding: 0px 80px;
+    z-index: 0;
+    .header {
+      color: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      @include flx-ali;
+      justify-content: space-around;
+      z-index: 100;
+
+      .search {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .body {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      color: #fff;
+      .next-pevrious {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+      }
+      .btn-play {
+        cursor: pointer;
+      }
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      @include flx-ali;
+      justify-content: space-between;
+      z-index: 100;
+      color: #fff;
+      .none {
+        width: 110px;
+      }
+      .process-time {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        width: 40%;
+      }
+      .scroll-audio {
+        @include flx-ali;
+        gap: 1em;
+      }
+      .btn-audio {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          top: -20px;
+          left: 0;
+          right: 0;
+          height: 20px;
+          z-index: 0;
+        }
+        &:hover input {
+          opacity: 1;
+        }
+        input {
+          position: absolute;
+          width: 100px;
+          transform: rotate(-90deg);
+          top: -70px;
+          opacity: 0;
+          transition: all 0.2s linear;
+          z-index: 10;
+        }
+      }
+    }
+    .video-player {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+      video {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .actions-other {
+    flex: 0 0 544px;
+    width: 544px;
+    padding: 16px 20px;
+    position: relative;
+    .actions-type__icons_btn {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .actions-left_icons {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      .actions-icon {
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+        .btn--actions__icons {
+          display: flex;
+          align-items: center;
+          padding: 5px;
+          background-color: rgba(22, 24, 35, 0.06);
+          border-radius: 50%;
+        }
+        p {
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+    }
+    .actions-right_icons {
+      @include flx-ali;
+      gap: 0.5em;
+    }
+    .box-actions_btn{
+      margin-top: 5px;
+    }
+    .copy-link {
+      @include flx-ali;
+      box-sizing: border-box;
+      border: 1px solid rgba(22, 24, 35, 0.12);
+      border-radius: 8px;
+      margin-top: 5px;
+      p:first-child {
+        flex: 1 1 auto;
+        text-overflow: ellipsis;
+        color: rgba(22, 24, 35, 0.75);
+        font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 7px 0px 5px 12px;
+        background-color: rgba(22, 24, 35, 0.06);
+      }
+      p:last-child {
+        color: rgb(22, 24, 35);
+        font-weight: 700;
+        background: none rgba(22, 24, 35, 0.06);
+        font-weight: 700;
+        flex: 0 0 auto;
+        cursor: pointer;
+        padding: 7px 18px 7px 0;
+      }
+    }
+    
+  }
+  .btn {
+    cursor: pointer;
+    padding: 9px 10px;
+    background: rgba(84, 84, 84, 0.5);
+    border-radius: 50%;
+    @include center;
+  }
+  
+}
+.volumn {
+  width: 48px;
+  height: 6px;
+  overflow: hidden;
+  appearance: none;
+  outline: none;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.34);
+  // opacity: 0;
+  &::-webkit-slider-thumb {
+    cursor: pointer;
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+    height: 8px;
+    width: 8px;
+    background-color: #f91010;
+    border-radius: 50%;
+    transform: translateY(-0.83px);
+    border: 2px solid rgb(255, 0, 0);
+    /*  slider progress trick  */
+    box-shadow: -407px 0 0 400px rgb(255, 0, 0);
+  }
+  &::-webkit-slider-runnable-track {
+    height: 6px;
+    // background: #ccc;
+    border-radius: 16px;
+  }
+  &::-moz-range-track {
+    height: 6px;
+    // background: #ccc;
+    border-radius: 16px;
+  }
+}
+.cursor {
+  @include flx-ali;
+  cursor: pointer;
+}
+.icons-heart-red{
+  color: #FE2C55;
+}
+.icons-favourites-yellow{
+  color: #FACE15;
+}

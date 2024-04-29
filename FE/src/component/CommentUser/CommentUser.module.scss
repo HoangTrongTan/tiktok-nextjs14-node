@@ -1,0 +1,237 @@
+@import "../customestyle.scss";
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6em;
+  margin: 15px 0;
+  &:hover .options-btn {
+    opacity: 1;
+  }
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .info--head {
+    @include center;
+    flex: 1;
+    .left {
+      .name {
+        @include flx-ali;
+        gap: 0.2em;
+        span:first-child {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 18px;
+          cursor: pointer;
+          &:hover{
+            border-bottom: 2px solid #000;
+          }
+        }
+        .author{
+          font-size: 14px;
+          color: rgb(254, 44, 85);
+        }
+      }
+      .content {
+        font-size: 16px;
+        line-height: 21px;
+        white-space: pre-line;
+        word-break: break-word;
+        margin-bottom: 6px;
+      }
+      .actons {
+        @include flx-ali;
+        gap: 5em;
+        color: rgba(22, 24, 35, 0.5);
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+    .right {
+      margin-left: auto;
+      @include center_column;
+      position: relative;
+      color: rgba(22, 24, 35, 0.5);
+      font-size: 12px;
+      line-height: 16px;
+      cursor: pointer;
+    }
+  }
+}
+.wrapper-comp {
+  display: flex;
+  flex-direction: column;
+  // gap: 0.5em;
+  .show-data {
+    padding-left: 50px;
+  }
+}
+.btn-show-when-render {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 29px;
+}
+.options-btn {
+  position: absolute;
+  top: -25px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.input {
+  width: 70%;
+  height: 59px;
+  padding: 15px 100px 15px 15px;
+  outline: none;
+  resize: none;
+  font-size: 16px;
+  border-radius: 5px;
+  border-radius: #bfbfbf;
+  background-color: rgba(22, 24, 35, 0.06);
+}
+.input:is(:focus, :valid) {
+  border-width: 2px;
+  padding: 15px 100px 15px 15px;
+  border-color: #4671ea;
+}
+.input::-webkit-scrollbar {
+  width: 0;
+}
+
+// ----------------------------------
+@mixin btn-seemore-hide {
+  color: rgba(22, 24, 35, 0.5);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: pointer;
+  @include flx_ali;
+  gap: 0.5em;
+}
+.see-more {
+  @include btn-seemore-hide;
+  span {
+    transform: translateY(2px);
+  }
+}
+.show-answer {
+  @include btn-seemore-hide;
+  span {
+    transform: translateY(2px);
+  }
+}
+.hide {
+  @include btn-seemore-hide;
+  span {
+    transform: rotate(-180deg);
+  }
+}
+
+// ----------
+.box-answer {
+  margin-top: 10px;
+  @include flx_ali;
+  gap: 1em;
+  .input-comment {
+    flex: 1 1 auto;
+    position: relative;
+    .check-character {
+      position: absolute;
+      width: 60px;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #f1f1f2;
+      border: 2px solid #4671ea;
+      border-radius: 5px;
+      color: rgba(22, 24, 35, 0.5);
+      font-size: 14px;
+      @include center;
+    }
+    .btn-tags {
+      cursor: pointer;
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      border-radius: 5px;
+      font-weight: 800;
+      font-size: 23px;
+      line-height: 35px;
+      transition: all 0.3s ease-in-out;
+
+      @include center;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.12);
+        z-index: 1000;
+      }
+
+      &:nth-child(2) {
+        right: 20px;
+        bottom: 15px;
+      }
+    }
+  }
+  .btn-post {
+    cursor: pointer;
+    margin-bottom: 5px;
+    color: rgb(254, 44, 85);
+    font-weight: 600;
+  }
+  .btn-close_comment {
+    cursor: pointer;
+  }
+}
+.clearClose {
+  .btn-close_comment {
+    display: none;
+  }
+}
+.small {
+  .input:is(:focus, :valid) {
+    border-width: 2px;
+    padding: 10px 100px 10px 15px;
+    border-color: #4671ea;
+  }
+  .btn-post {
+    margin-right: 10px;
+  }
+  .btn-tags {
+    bottom: 8px !important;
+    right: 70px !important;
+    &:nth-child(2) {
+      right: 35px !important;
+    }
+  }
+}
+
+
+.smallImg {
+  margin: 0 0 10px 0 ;
+  img{
+    width: 24px;
+    height: 24px;
+  }
+}
+.modal-del_wrap{
+  // background-color: #4671ea;
+  border-radius: 8px;
+  .modal-txt{
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    padding: 28px 24px;
+    text-align: center;
+  }
+  .modal-btn{
+    font-weight: 600;
+    font-size: 14px;
+    height: 48px;
+    line-height: 48px;
+    cursor: pointer;
+    text-align: center;
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
+  }
+}

@@ -1,0 +1,10 @@
+.wrapper{
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: var(--margin-top-way-header);
+    margin-left: var(--width-sidebar);
+}

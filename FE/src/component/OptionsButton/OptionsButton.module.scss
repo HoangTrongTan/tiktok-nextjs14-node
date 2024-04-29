@@ -1,0 +1,44 @@
+.popup-item {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.3s linear;
+  &:hover {
+    border-radius: 5px;
+    background: rgba(22, 24, 35, 0.03);
+  }
+  .icon-popup {
+    display: flex;
+    align-items: center;
+  }
+  p {
+    color: #000;
+  }
+}
+
+.black {
+  .popup-item {
+    color: #fff;
+    p {
+      color: #fff;
+    }
+  }
+  .popup-item:hover {
+    background: rgba(255, 255, 255, 0.218);
+    
+  }
+}
+.hoverPink {
+  .popup-item:hover {
+    color: #FE2C55;
+    background: transparent;
+    p{
+        color: #FE2C55;
+    }
+  }
+}
+.hoverBolder{
+
+}

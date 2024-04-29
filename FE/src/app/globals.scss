@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Dhurjati&family=Pacifico&family=Protest+Revolution&family=Roboto:wght@100;300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --width-sidebar: 240px;
+  --margin-top-way-header: 60px;
+}
+.react-input-emoji--input {
+  padding-right: -50px;
+}
+.ant-menu-inline {
+  border: none !important;
+}
+.ant-menu-item-selected {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 22px;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(254, 44, 85);
+  }
+}
+.ant-modal-content{
+  padding: 0 !important;
+  border-radius: 8px;
+}
+a{
+  text-decoration: none;
+  color: #000;
+  &:hover{
+  }
+}

@@ -1,0 +1,83 @@
+@import "../customestyle.scss";
+@mixin text-css {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: rgba(22, 24, 35, 0.5);
+}
+.wrapper {
+  .text-margin {
+    margin: 10px 0 20px 0;
+  }
+  .text-font-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .text-blur {
+    margin-top: 10px;
+    @include text-css;
+  }
+  .text-blur-no-margin {
+    @include text-css;
+  }
+  .body {
+    @include flx-ali-start;
+    gap: 2em;
+    .chuthich-kitu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .flex {
+    @include flx-ali;
+    gap: 0.3em;
+  }
+  .fix-cover-image {
+    width: 150px;
+    height: 200px;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .child-fix-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(238, 242, 242, 0.467);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      color: #fff;
+    }
+  }
+  .calendar-for-video {
+    @include flx-ali;
+    gap: 1em;
+    margin: 0 0 15px 0;
+  }
+  .khai-bao-noi-dung {
+    @include flx-ali;
+    gap: 1em;
+  }
+  .btn-huy-dang {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+  }
+  .right{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+  }
+}

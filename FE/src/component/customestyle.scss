@@ -1,0 +1,93 @@
+@mixin flx-ali($gap: 0,$ali:center) {
+  display: flex;
+  align-items: $ali;
+  gap: $gap;
+}
+@mixin flx-ali-end($gap:0) {
+  display: flex;
+  align-items: flex-end;
+  gap: $gap;
+}
+@mixin flx-ali-start($gap: 0) {
+  display: flex;
+  align-items: flex-start;
+  gap: $gap;
+}
+@mixin flx-ali-betwwen($gap:0) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $gap;
+}
+@mixin flx-ali-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@mixin center($gap: 0) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+@mixin center_column($gap: 0) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+@mixin fle-ali_column($gap: 0,$ali:center) {
+  display: flex;
+  flex-direction: column;
+  align-items: $ali;
+  gap: $gap;
+}
+
+///postions
+@mixin pos-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+@mixin center-x-pos {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@mixin center-y-pos {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin w_h($width: 0, $height: 0, $border_radius: 0, $bg: none, $shadow:0) {
+  width: $width;
+  height: $height;
+  border-radius: $border_radius;
+  background: $bg;
+  box-shadow: $shadow;
+}
+
+@mixin ft-sz-clr-wei-mar-pad-alig(
+  // $ft,
+  $sz,
+  $cl:#000,
+  $wei,
+  $mar:0,
+  $pad:0,
+  $alig:start
+) {
+  color: $cl;
+  font-weight: $wei;
+  font-size: $sz;
+  line-height: $sz;
+  margin: $mar;
+  padding: $pad;
+  // font-family: $ft;
+  text-align: $alig;
+  word-break: break-word;
+}

@@ -1,0 +1,176 @@
+@import "../customestyle.scss";
+.wrapper {
+  width: 284px;
+  height: 587px;
+  position: relative;
+  &:hover .box-hover {
+    opacity: 1;
+  }
+  .screnn {
+    position: absolute;
+    padding: 10px 10px 50px 10px;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 50px;
+    background-color: #000;
+    border-radius: 35px 35px 0 0;
+    box-shadow: inset 5px 5px 10px #0a0a0a,
+            inset -5px -5px 10px #282a28;
+  }
+  .anh-dienthoai {
+    @include pos-full;
+
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  .center {
+  }
+  .header {
+    position: absolute;
+    top: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5em;
+    left: 0;
+    right: 0;
+    .white {
+      color: #e5e2e2d5;
+      margin-left: 15px;
+    }
+    p {
+      @include center;
+      font-size: 13px;
+      font-family: "Dhurjati", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+  }
+  .body {
+    @include center-y-pos;
+    @include center;
+    left: 0;
+    right: 0;
+    video {
+      object-fit: contain;
+      width: 250px;
+      height: 200px;
+      border-radius: 10px;
+    }
+  }
+  .footer {
+    position: absolute;
+    bottom: 15px;
+    @include center;
+    gap: 1em;
+    p {
+      font-size: 10px;
+      font-family: "Dhurjati", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    img {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 10px solid #c7c5c563;
+    }
+  }
+  .btns {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    @include center;
+    gap: 1em;
+
+    .btn-item {
+      @include center_column;
+      p {
+        font-size: 10px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+    }
+    .btn-plus {
+      background: linear-gradient(
+        0.25turn,
+        rgb(37, 244, 238) 0px,
+        rgb(37, 244, 238) 50%,
+        rgb(254, 44, 85) 50%,
+        rgb(254, 44, 85) 100%
+      );
+      padding: 0 2px;
+      border-radius: 5px;
+      z-index: 0;
+      opacity: 0.6;
+      p {
+        border-radius: 5px;
+        background-color: #fff;
+        padding: 2px 8px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+    }
+  }
+  .btn-tiktok {
+    position: absolute;
+    right: 30px;
+    bottom: 150px;
+    @include center_column;
+    gap: 1em;
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      opacity: 0.5;
+    }
+  }
+  .btn-actions-videos {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .box-hover {
+    width: 100%;
+    height: 100%;
+    @include center_column;
+    color: #fff;
+    padding: 20px 0;
+    gap: 0.5em;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 10000;
+    .input-box {
+      width: 86%;
+    }
+    p {
+      z-index: 10000;
+      color: #fff;
+    }
+    .top {
+      @include flx-ali-around;
+      gap: 3em;
+      .left {
+        @include flx-ali;
+        gap: 0.4em;
+      }
+      .right {
+        @include flx-ali;
+        gap: 1em;
+      }
+    }
+  }
+}
+
+.icon-blur {
+  opacity: 0.5;
+  color: rgba(240, 248, 255, 0.751);
+}

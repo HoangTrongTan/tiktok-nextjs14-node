@@ -1,0 +1,40 @@
+@import "../../customestyle.scss";
+.wrapper {
+  width: 385px;
+  height: 640px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px -4px 32px;
+  padding: 20px 0;
+  @include fle-ali_column;
+  h1:first-child {
+    margin-bottom: 20px;
+  }
+  .list-btn {
+    @include flx-ali($gap: 1em);
+    flex-wrap: wrap;
+    padding: 0px 17px;
+    h3 {
+      background: rgba(22, 24, 35, 0.06);
+      padding: 2px 8px;
+      border-radius: 12px;
+      transition: background 0.5s linear;
+      cursor: pointer;
+      &:hover {
+        background: rgba(0, 0, 0, 0.12);
+      }
+    }
+    .active {
+      background: #000;
+      color: #fff;
+      &:hover {
+        background: #000;
+      }
+    }
+  }
+  .list-data {
+    margin-top: 15px;
+    flex: 1;
+    width: 100%;
+    overflow-y: overlay;
+  }
+}

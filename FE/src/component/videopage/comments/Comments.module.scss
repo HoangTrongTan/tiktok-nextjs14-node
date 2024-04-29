@@ -1,0 +1,14 @@
+.wrapper {
+  overflow-y: scroll;
+  height: 300px;
+  .post-comment {
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+    right: 0;
+    padding: 0px 20px 10px 20px;
+    border-top: 1px solid rgba(22, 24, 35, 0.2);
+    background-color: #fff;
+  }
+
+}

@@ -1,0 +1,83 @@
+@import "../customestyle.scss";
+.wrapper {
+  position: absolute;
+  padding: 10px 10px 50px 10px;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 35px;
+  background-color: #fff;
+  overflow: hidden;
+
+  .top {
+    @include flx-ali-betwwen;
+    margin-top: 10px;
+    p {
+      @include center(0.5em);
+    }
+  }
+  .body1 {
+    margin-top: 20px;
+    @include center_column(0.2em);
+    img {
+      @include w_h(50px, 50px, 50%);
+    }
+  }
+  .body2 {
+    margin-top: 20px;
+    @include flx-ali-around;
+  }
+  $w-item-video: 83px ;
+  $h-item-video: 110px;
+  .box-video {
+    display: grid;
+    grid-template-columns: $w-item-video $w-item-video $w-item-video;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2em;
+    .vd-item {
+      background-color: aqua;
+      box-sizing: border-box;
+      height: $h-item-video;
+      width: $w-item-video;
+      flex: 0 0 86px;
+      -webkit-box-flex: 0;
+      display: flex;
+      flex-direction: column;
+      -webkit-box-pack: end;
+      justify-content: flex-end;
+      align-items: flex-start;
+      background-color: rgb(232, 228, 228);
+      position: relative;
+      color: #fff;
+      font-size: 10px;
+    }
+    .vd-item-video {
+      position: relative;
+      height: $h-item-video;
+      width: $w-item-video;
+      flex: 0 0 86px;
+      overflow: hidden;
+      background-color: rgb(232, 228, 228);
+      font-size: 10px;
+      video {
+        @include w_h(100%, 100%);
+        object-fit: contain;
+      }
+      
+    }
+    .templates {
+        position: absolute;
+        @include flx-ali;
+        bottom: 10px;
+        left: 10px;
+        color: #fff;
+        gap: 0.3em;
+        p{
+            color: #fff;
+
+        }
+      }
+  }
+}

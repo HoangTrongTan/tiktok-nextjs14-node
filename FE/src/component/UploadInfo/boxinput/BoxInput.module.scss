@@ -1,0 +1,50 @@
+@mixin btnInInput {
+  @include center-y-pos;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@import "../../customestyle.scss";
+//------------------ROOT------------------------
+$width-input: 82%;
+
+//------------------END-------------------------
+.wrapper {
+  min-height: 38px;
+  position: relative;
+  border: 1px solid var(--tux-colorLineSecondary);
+  width: 100%;
+  input {
+    width: $width-input;
+    min-height: 38px;
+    padding: 0px 80px 0px 50px;
+    outline: none;
+    z-index: 100;
+    &:is(:focus, :valid) {
+      border: 1px solid rgba(22, 24, 35, 0.12);
+      border-radius: 5px;
+    }
+  }
+
+  .suggest {
+    @include btnInInput;
+    right: 20px;
+  }
+  .tags {
+    @include btnInInput;
+    right: 50px;
+  }
+  .glass-css {
+    @include center-y-pos;
+    left: 15px;
+    cursor: pointer;
+  }
+  .close-css {
+    @include center-y-pos;
+    right: 15px;
+    cursor: pointer;
+  }
+}

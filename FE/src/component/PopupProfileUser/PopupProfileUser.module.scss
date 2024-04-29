@@ -1,0 +1,60 @@
+.wrapper {
+  width: 320px;
+  box-sizing: border-box;
+  padding: 20px;
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 16px;
+  border-radius: 8px;
+  img{
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .card-username {
+    color: rgb(22, 24, 35);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .card-nickname {
+    color: rgb(22, 24, 35);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .user-start-follow-like {
+    span:nth-child(1),
+    span:nth-child(3) {
+      font-weight: 700;
+      margin-right: 6px;
+      font-size: 17px;
+      line-height: 20px;
+      display: inline-block;
+    }
+    span:nth-child(2),
+    span:nth-child(4) {
+      color: rgba(22, 24, 35, 0.75);
+      font-size: 17px;
+      line-height: 20px;
+      margin-right: 10px;
+      display: inline-block;
+    }
+  }
+  .user-card-user-bio{
+    font-size: 14px;
+    line-height: 18px;
+    padding-top: 16px;
+    margin-top: 16px;
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
+  }
+}

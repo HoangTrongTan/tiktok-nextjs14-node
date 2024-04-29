@@ -1,0 +1,89 @@
+@import "../../component/customestyle.scss";
+
+.wrapper {
+  background-color: #F8F8F8;
+  .header {
+    @include flx-ali;
+    padding: 0px 60px 0px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    z-index: 1;
+    height: 60px;
+    justify-content: space-between;
+    .left {
+      @include flx-ali;
+      flex-flow: row;
+      -webkit-box-align: center;
+      gap: 24px;
+      .tux-text1 {
+        box-sizing: border-box;
+        font-weight: 700;
+        color: #fff;
+        padding: 3px 2px;
+        border-radius: 3px;
+        background: linear-gradient(
+          0.25turn,
+          rgb(37, 244, 238) 0px,
+          rgb(37, 244, 238) 50%,
+          rgb(254, 44, 85) 50%,
+          rgb(254, 44, 85) 100%
+        );
+        span {
+          font-weight: 700;
+          border-radius: 3px;
+          background-color: rgb(18, 18, 18);
+          padding: 3px 9px;
+        }
+      }
+      .tux-text {
+        color: #fff;
+        background-color: #fe2c55;
+        border-radius: 3px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+    }
+    .right {
+      img {
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        box-shadow: 5px 5px 11px #dbe9db, -5px -5px 11px #f2fff3;
+        cursor: pointer;
+      }
+    }
+  }
+  .body {
+    width: 100%;
+    height: calc(100% - 60px);
+    display: grid;
+    grid-template-columns: 240px auto;
+    grid-template-areas: "sidebar content";
+    
+    .sidebar-container {
+      display: flex;
+      flex-flow: column;
+      -webkit-box-align: stretch;
+      align-items: stretch;
+      padding: 18px 12px 22px;
+      height: 100%;
+      background-color: rgb(255, 255, 255);
+      border-right: 1px solid rgba(22, 24, 35, 0.12);
+      justify-content: space-between;
+      .menu {
+        margin-top: 28px;
+        border-top: 1px solid rgba(22, 24, 35, 0.12);
+        .text-menu {
+          font-size: 16px;
+          font-family: 500;
+          
+        }
+      }
+    }
+    .page-container{
+      padding: 40px 80px;
+      background-color: #F3F3F3;
+    }
+  }
+}

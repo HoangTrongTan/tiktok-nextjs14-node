@@ -1,0 +1,52 @@
+@import "../../customestyle.scss";
+.wrapper {
+  display: grid;
+  grid-template-columns: 160px 160px 160px;
+  justify-content: center;
+  gap: 0.5em;
+  height: 350px;
+  overflow-y: scroll;
+  .item {
+    flex: 1 1 auto;
+    height: 239px;
+    position: relative;
+    video {
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .coating {
+      border-radius: 10px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #ffffff34;
+      backdrop-filter: blur(10px);
+    }
+    .on-load {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include center_column;
+      gap: 0.5em;
+      p {
+        font-size: 13px;
+        line-height: 17px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+      }
+    }
+    .play-btn{
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        color: #fff;
+        font-weight: bolder;
+        @include center;
+    }
+  }
+}

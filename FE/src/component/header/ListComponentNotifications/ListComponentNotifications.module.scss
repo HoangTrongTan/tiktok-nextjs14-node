@@ -1,0 +1,59 @@
+@import "../../customestyle.scss";
+.list-like-wrapper {
+}
+.date-text {
+  padding: 0px 16px;
+  color: rgba(22, 24, 35, 0.5);
+  font-weight: 600;
+}
+.item {
+  cursor: pointer;
+  @include flx-ali-start($gap: 0.6em);
+  padding: 7px 17px;
+  .multi-img {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    .img1 {
+      @include w_h($width: 32px, $height: 32px, $border_radius: 50%);
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .img2 {
+      @include w_h($width: 32px, $height: 32px, $border_radius: 50%);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  &:hover {
+    background: #f7f7f8;
+  }
+  .content-info {
+    flex: 1;
+    p {
+      color: rgba(22, 24, 35, 0.5);
+      font-weight: 600;
+    }
+    span {
+      font-weight: 600;
+      color: rgba(22, 24, 35, 0.5);
+      padding-left: 15px;
+      position: relative;
+      margin-top: 4px;
+      &::before {
+        content: "";
+        @include center-y-pos;
+        @include w_h($width: 2px, $height: 18px, $bg: rgba(22, 24, 35, 0.246));
+        left: 0;
+      }
+    }
+  }
+  img:first-child {
+    @include w_h($width: 48px, $height: 48px, $border_radius: 50%);
+  }
+  img:last-child {
+    @include w_h($width: 42px, $height: 56px, $border_radius: 3px);
+  }
+}

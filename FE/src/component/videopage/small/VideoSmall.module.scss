@@ -1,0 +1,13 @@
+.wrapper {
+    background: rgb(255, 255, 255);
+    display: flex;
+    .video-watching {
+      flex: 1 0 600px;
+      max-width: 100%;
+      // background: rgb(0, 0, 0);
+      position: relative;
+      overflow: hidden;
+      padding: 0px 80px;
+    }
+  }
+  

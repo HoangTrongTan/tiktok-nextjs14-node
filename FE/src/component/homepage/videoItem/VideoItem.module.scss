@@ -1,0 +1,55 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px 0px;
+  position: relative;
+  max-width: 692px;
+  height: unset;
+  width: unset;
+  gap: 0.7em;
+  transition-property: margin;
+  transition-duration: 0.3s;
+  margin-bottom: 0px;
+  .name {
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    &:hover{
+        border-bottom: 2px solid #000;
+    }
+  }
+  .nick-name {
+    font-weight: 400;
+    fill: rgb(22, 24, 35);
+  }
+  .captions {
+    font-weight: 400;
+    fill: rgb(22, 24, 35);
+  }
+  .tags{
+    font-weight: 600;
+    color: rgb(43, 93, 185);
+    margin-left: 6px;
+    cursor: pointer;
+    &:hover{
+        border-bottom: 2px solid #000;
+    }
+  }
+  .music{
+    display: flex;
+    align-items: center;
+    padding: 5px 0 13px 0;
+  }
+  img {
+    border-radius: 50%;
+  }
+  .card-content {
+    width: 500px;
+  }
+  .wrapper-video {
+    display: flex;
+    gap: 1em;
+    align-items: flex-end;
+  }
+}
